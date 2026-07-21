@@ -197,7 +197,8 @@ def main(args):
         prefix = args.prefix
 
     print ("overwritting args.save_path")
-    args.save_path = os.path.join(prefix, args.data_path.split('/')[-1], args.tasks)
+    dataset_name = os.path.basename(os.path.normpath(args.data_path))
+    args.save_path = os.path.join(prefix, dataset_name, args.tasks)
     tmp_str = "g-{}-mode-{}".format(args.gamma, args.beta_mode)
 
     if args.checkpoint_path is not None:

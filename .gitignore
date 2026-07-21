@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Environments and editors
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Datasets, checkpoints, and experiment output
+data/
+Data/
+logs/
+logs-debug/
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+
+# OS files
+.DS_Store
+Thumbs.db

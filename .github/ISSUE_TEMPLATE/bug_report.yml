@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible training, evaluation, or data issue.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve the reproduction. Please remove private paths and credentials from logs.
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Python, PyTorch, CUDA, GPU, and operating system versions.
+      placeholder: Python 3.9, PyTorch 2.1, CUDA 11.8, Ubuntu 22.04
+    validations:
+      required: true
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset and query types
+      placeholder: FB15k-betae; 1p.2p.3p.2i.3i
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: The smallest command that reproduces the problem.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the expected result, actual result, and relevant logs.
+    validations:
+      required: true
